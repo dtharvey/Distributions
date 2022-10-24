@@ -1,0 +1,14 @@
+name: Distributions
+title: Distributions
+username:
+account: dthdpu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7381422
+bundleId: 6427901
+url: https://dthdpu.shinyapps.io/Distributions/
+when: 1666374574.59938
+lastSyncTime: 1666374574.59939
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: activity1.Rmd|activity2.Rmd|activity3.Rmd|activity4.Rmd|cuxs.csv|distributions.R|introduction.Rmd|pipets_old.csv|wrapup.Rmd

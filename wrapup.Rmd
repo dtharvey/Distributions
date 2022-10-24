@@ -1,0 +1,17 @@
+---
+output: html_document
+---
+
+#### Source of Data
+
+Of the four data sets in this module, only the Cu~*x*~S data is from an actual experiment (completed by DePauw students in the 1990s). See Blanchnik, R.; Müller, A. "The Formation of Cu~*x*~S From the Elements I. Copper Used in Form of Powders," Thermochim. Acta, 2000, 361, 31-52 for a discussion of some of the factors that affect the formation of non-stoichiometric copper sulfide [link](https://doi.org/10.1016/S0040-6031(00)00545-1).
+
+The other three data sets were created using *R* to sample (a) a random poisson distribution 365 times using a $\lambda$ of 5 particles per 7 seconds, (b) a uniform distribution 1000 times using a minimum value of 9.98 and a maximum value of 10.02, and (c) a binomial distribution 100 times using a size of 27 and a probability of 0.0111. All three of these data sets, however, are representative of expected results for these systems.
+
+#### Other Types of Distributions
+
+There are others types of distributions, one of which is an exponential distribution where the probability of an event, $p(x)$, as a function of time, *t*, is
+
+$$Pp(x) = \lambda e^{-\lambda t}$$
+
+where $\lambda$ is the average rate at which the event occurs. The emission of beta particles from ^40^K, which we considered earlier using a Poisson distribution, has an average rate of 5 particles per 7 seconds, or 0.714 particles/second. We can turn this around and ask about the times between the emission two beta particles. The figure on the right shows a histogram of the distribution of these times along with an overlay of the expected distribution. The results show that the most common time is between 0 and 1 seconds, and that there is little likelihood of a delay exceeding 8 seconds. Interestingly, the individual rates of beta emission follow a discrete distribution and the individual times between emission follow a continuous distribution.

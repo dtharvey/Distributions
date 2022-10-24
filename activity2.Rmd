@@ -1,0 +1,23 @@
+---
+output: html_document
+---
+
+#### Emission of Beta Particles from ^40^K
+
+The figure on the right is a barplot of the results for the emission of beta particles from ^40^K in 7-s intervals. A barplot shows the frequency of beta emission, which ranges from intervals in which no beta particles were emitted to intervals in which as many as 13 beta particles were emitted.
+
+Q1. Although a barplot and a histogram look similar, they are not interchangeable. A histogram is useful for continuous data and a barplot is useful for discrete data. Why are the results of beta emission considered discrete instead of continuous?
+
+The data in this experiment follow a Poisson distribution in which the probability of a particular outcome, $p(x)$, in a given period of time, such as 7 s, is given by the equation
+
+$$p(x) = \frac{\lambda^x e^{-\lambda}}{x!}$$
+
+where $\lambda$ is the outcome's average rate and where the exclamation point indicates the factorial.
+
+Q2. For the Cu~*x*~S data we drew the theoretical distribution as a line, but here we show only a set of points. Explain why we can display a normal distribution as a line, but cannot do so with a Poisson distribution.
+
+Q3. Use the slider to determine the value of $\lambda$ for this data. Use your value of $\lambda$ to calculate the probability that a single beta particle is emitted, *p(x = 1)*. Compare this probability to the barplot and explain how to convert your probability into a number of events.
+
+Q4. How does the shape of the Poisson distribution change as you adjust the value of $\lambda$ from 0 to 13?
+
+Q5. This data was collected using intervals of 7 s, which seems like an arbitrary choice. What problems might we expect if we used an interval of 1 s? What problems might we expect if we used an interval of 15 s?

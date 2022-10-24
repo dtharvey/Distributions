@@ -1,0 +1,19 @@
+---
+output: html_document
+---
+
+#### ^13^C Atoms in Cholesterol
+
+The figure on the right is a barplot that shows, for 100 molecules of cholesterol, the number that have 0, 1, 2, 3, 4, or 5 atoms of ^13^C as determined by mass spectrometry.
+
+Q1. Is this data continuous or discrete? How do you know?
+
+The data in this case follow a binomial distribution in which the probability of a particular outcome, $p(x)$, is given by the equation
+
+$$p(x) = \frac{n!}{x!(n - x)!} \times p^{x} \times (1 - p)^{n - x}$$
+
+where *n* is the number of carbons atoms in cholesterol (also called the size), *x* is the number of ^13^C atoms in a molecule, and *p* is the probability that a randomly selected carbon atom is ^13^C.
+
+Q2. Adjust the sliders for the correct number of carbon atoms in cholesterol and the probability that an atom is ^13^C; you will need to do some searching to find these values. Set the sliders to these values and comment on the fit of the equation to the data.
+
+Q3. Calculate $p(5)$ for *n* = 15 and *p* = 0.333. Adjust the sliders to check your answer.
