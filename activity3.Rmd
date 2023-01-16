@@ -4,16 +4,11 @@ output: html_document
 
 #### Certification of Class A 10-mL Pipettes
 
-The figure on the right is a histogram that shows the distribution of the certified volumes of 1000 10-mL pipettes. 
+The figure on the right is a histogram that shows the distribution of the certified volumes of 1000 10-mL pipettes. The number of pipets in each of the histogram's bins is shown at the top of the bin. A pipet's certified tolerance is the range of volumes around the pipet's expected volume, which in for a Class A 10-mL pipet is $10.00 \pm 0.02$ mL. A pipette with a volume that is outside the range 10.000 $\pm \Delta$ mL is discarded.
 
 Q1. Is this data continuous or discrete? How do you know?
 
-The data in this case follow a uniform distribution in which the probability of a particular outcome, $p(x)$, is given by the equation
+Q2. This distribution is described as uniform. What does it mean to be uniform? What will happen to the shape of this distribution and the counts in each bin if you increase or decrease the number of bins? Use the slider to check your prediction.
 
-$$p(x) = \frac{1}{max - min}$$
+Q3. For a uniform distribution, the mean is $\frac{b+a}{2}$ and the standard deviation is $\sqrt{\frac{1}{12}(b - a)^2}$ where $a$ and $b$ are, respectively, the distribution's largest and the smallest values. Calculate the expected mean and standard deviation for Class A 10-mL pipets and then download the data and check your result by calculating the actual mean and standard deviation.
 
-where *max* and *min* are the maximum and the minimum values for *x*.
-
-Q2. A pipet's certified tolerance is the range of values ($\pm \Delta$) around the pipet's expected value. A pipette that has a certified volume that is outside the range 10.000 $\pm \Delta$ mL is discarded. Use the slider to determine the values for *max* and *min*, and the value for $\pm \Delta$. Note that the slider's scale is logarithmic.
-
-Q3. This distribution is described as uniform. What does it mean to be uniform? If we displayed each pipette by its volume along the *x*-axis as a point, but randomly along the *y*-axis, or displayed each pipette by its volume along the *x*-axis as a short vertical line (called a rug plot), what would you expect to see? Make a prediction and then use the checkbox to display results for the individual pipettes. Are the points and rugs consistent with your expectations?

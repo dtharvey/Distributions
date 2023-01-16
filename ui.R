@@ -60,8 +60,10 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                   align = "center",
                    splitLayout(
                   sliderInput("lambda","average rate: particles per 7 s",
-                                  min = 0, max = 13, value = 13, step = 0.1)
+                                  min = 0, max = 13, value = 13, step = 0.1),
+                  downloadButton("betadata","download data")
                                 ),
+                  
                                 plotOutput("activity2plot", height = "600px")
                 )
                 ),
@@ -75,14 +77,11 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                    column(width = 6,
                     align = "center",
                       splitLayout(
-                       sliderInput("pip", 
-                                   label=div(HTML("log(±Delta)")),
-                                   min = -3, max = 0, 
-                                   value = -1.699, 
-                                   step = 0.001),
-                       checkboxInput(inputId = "indpoints", 
-                                     label = "show individual pipettes",
-                                     value = FALSE)
+                       sliderInput("bins",
+                                   label = "number of bins",
+                                   min = 1, max = 20, 
+                                   value = 10, step= 1, width = "400px"),
+                       downloadButton("pipetdata","download data")
                               ),
                                 plotOutput("activity3plot", height = "600px")
                          )
@@ -100,10 +99,11 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                     splitLayout(
                                 sliderInput("size","number of carbon atoms (n)",
                                             min = 1, max = 50, value = 25,
-                                            step = 1),
+                                            step = 1, width = "200px"),
                                 sliderInput("prob","probability of C-13 (p)",
                                             min = 0, max = 1, value = 0.5,
-                                            step = 0.001)
+                                            step = 0.001, width = "200px"),
+                                downloadButton("choldata","download data")
                                 ),
                                 plotOutput("activity4plot", height = "600px")
                          )

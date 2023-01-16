@@ -66,15 +66,7 @@ shinyServer(function(input,output){
     filename = "cuxsresults.csv",
     content = function(file){
       write.csv(cuxs$x,file)
-    }
-  )
-  
-  output$download_2a = downloadHandler(
-    filename = "beersLaw.csv",
-    content = function(file) {
-      write.csv(rawdata[ , c(1, 4, 5)], file)
-    }
-  )
+    })
   
   output$activity2plot = renderPlot({
     old.par = par(lwd = 3)
@@ -92,20 +84,26 @@ shinyServer(function(input,output){
     par(old.par)
   })
   
+  output$betadata = downloadHandler(
+    filename = "betaparticles.csv",
+    content = function(file){
+      write.csv(data.frame(betaparticles$x, betaparticles$y),file)
+    })
+  
   output$activity3plot = renderPlot({
     old.par = par(lwd = 3)
-    h = hist(pipets$x, breaks = seq(9.968,10.032,0.004), plot = FALSE)
-    maxy = max(h$counts)
-    hist(pipets$x, breaks = seq(9.968,10.032,0.004), col = c(8), border = 1,
-         xlab = "volume (mL)", ylab = "number of pipets", 
-         xlim = c(10 - 10^input$pip,10+10^input$pip), ylim = c(0,maxy),
+    hist(pipets$x, breaks = seq(9.98,10.02, 0.04/input$bins), 
+         col = c(8), border = 1, labels = TRUE,
+         xlab = "volume of pipet (mL)", ylab = "number of pipets",
          main = "Certification of Class A 10-mL Pipettes")
-    if (input$indpoints == TRUE){
-    points(x = pipets$x, y = runif(1000,0,100), pch = 19, cex = 0.5)
-    rug(pipets$x)
-    }
     par(old.par)
   })
+  
+  output$pipetdata = downloadHandler(
+    filename = "pipetes.csv",
+    content = function(file){
+      write.csv(pipets$x,file)
+    })
   
   output$activity4plot = renderPlot({
     old.par = par(lwd = 3)
@@ -124,6 +122,11 @@ shinyServer(function(input,output){
     points(x = chol_bar, y = ypoints, pch = 19, cex = 1.25, col = "black")
     par(old.par)
   })
+  
+  output$choldata = downloadHandler(
+    filename = "cholesterol.csv",
+    content = function(file){
+      write.csv(data.frame(cholesterol$x, cholesterol$y),file)})
   
   output$wrapupplot1 = renderPlot({
     

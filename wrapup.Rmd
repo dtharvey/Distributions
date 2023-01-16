@@ -4,7 +4,7 @@ output: html_document
 
 #### Source of Data
 
-Of the four data sets in this module, only the Cu~*x*~S data is from an actual experiment (completed by DePauw students in the 1990s). See Blanchnik, R.; Müller, A. "The Formation of Cu~*x*~S From the Elements I. Copper Used in Form of Powders," Thermochim. Acta, 2000, 361, 31-52 for a discussion of some of the factors that affect the formation of non-stoichiometric copper sulfide [link](https://doi.org/10.1016/S0040-6031(00)00545-1).
+Of the four data sets in this module, only the Cu~*x*~S data is from an actual experiment (completed by students at DePauw University in the 1990s). See Blanchnik, R.; Müller, A. "The Formation of Cu~*x*~S From the Elements I. Copper Used in Form of Powders," Thermochim. Acta, 2000, 361, 31-52 for a discussion of some of the factors that affect the formation of non-stoichiometric copper sulfide [link](https://doi.org/10.1016/S0040-6031(00)00545-1).
 
 The other three data sets were created using *R* to sample (a) a random poisson distribution 365 times using a $\lambda$ of 5 particles per 7 seconds, (b) a uniform distribution 1000 times using a minimum value of 9.98 and a maximum value of 10.02, and (c) a binomial distribution 100 times using a size of 27 and a probability of 0.0111. All three of these data sets, however, are representative of expected results for these systems.
 
