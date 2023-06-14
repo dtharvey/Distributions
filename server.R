@@ -80,7 +80,7 @@ shinyServer(function(input,output){
                       ylab = "number of intevals",
                       xlab = "number of beta particles emitted",
                       main = "Emission of Beta Particles From Potassium-40")
-    points(x = beta_bar, y = ypoints, pch = 19, cex = 1.25, col = "black")
+    lines(x = beta_bar, y = ypoints, type = "b", pch = 19, cex = 1.25, col = "black")
     par(old.par)
   })
   

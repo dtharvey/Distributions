@@ -4,14 +4,14 @@ output: html_document
 
 <!-- introduction -->
 
-The plots on the right show the results of four experiments. Each plot shows the frequency of a particular outcome on the *y*-axis as a function of possible outcomes on the *x*-axis. These experiments are:
+The plots on the right show the distribution of results for four experiments. Each plot shows the frequency of a particular outcome on the *y*-axis as a function of possible outcomes on the *x*-axis. These experiments are:
 
-**Copper/Sulfur Ratio in Copper Sulfide**. If we place powdered copper metal and an excess of powdered sulfur in a crucible and ignite them, copper sulfide forms with an empirical formula of Cu~*x*~S. The value of *x* is determined by weighing the Cu before ignition and then determining the mass of Cu~*x*~S when the reaction is complete; any excess sulfur is removed as SO~2~. The distribution of results for 62 measurements of *x* is shown here.
+**Copper/Sulfur Ratio in Copper Sulfide**. If we mix powdered copper metal with a stoichiometric excess of powdered sulfur and ignite them in a crucible, copper (I) sulfide forms with an empirical formula of Cu~*x*~S. The value of *x* is determined by weighing the Cu before ignition and then determining the mass of Cu~*x*~S when the reaction is complete; any excess sulfur is removed as SO~2~. The plot in the upper-left corner shows the distribution of the values of *x* for 62 trials.
 
-**Emission of Beta Particles from ^40^K**. In beta emission an unstable neutron is converted into an electron and a proton. The proton remains in the nucleus, increasing the atom's atomic number by one; the electron is ejected as a beta particle. The distribution of the emission of beta particles from ^40^K for 365 consecutive 7-s intervals is shown here.
+**Emission of Beta Particles from ^40^K**. In beta emission, an unstable neutron is converted into an electron and a proton. The proton remains in the nucleus, increasing the atom's atomic number by one, and the electron is ejected as a beta particle. The plot in the upper-right corner shows the distribution of the number of beta particles emitted from a sample of ^40^K during each of 365 consecutive 7-s intervals.
 
-**Certification of Class A 10-mL Pipettes**. Class A pipettes are designed to deliver a calibrated volume of liquid. Each pipet has a unique identification number and carries a certificate that states its precise calibrated volume traced to a NIST-approved standard. The distribution of calibration results for 1000 Class A 10-mL pipettes is shown here.
+**Certification of Class A 10-mL Pipettes**. A class A pipette is designed to deliver a calibrated volume of liquid. Each pipet has a unique identification number and carries a certificate that states its precise calibrated volume traced to a NIST-approved standard. The plot in the lower-left corner shows the distribution of the calibration results for 1000 Class A 10-mL pipettes.
 
-^**13**^**C Atoms in Cholesterol**. Carbon has two stable isotopes: ^12^C and ^13^C. Because ^12^C is much more abundant than ^13^C, most organic molecules have no atoms of ^13^C; a few molecules, however, contain one or more atoms of ^13^C. The distribution of ^13^C in 100 molecules of cholesterol is shown here.
+^**13**^**C Atoms in Cholesterol**. Carbon has two stable isotopes: ^12^C and ^13^C. Because ^12^C is much more abundant than ^13^C, most organic molecules have no atoms of ^13^C; a few molecules, however, will contain one or more atoms of ^13^C. The plot in the lower-right corner shows the distribution of the number of ^13^C atoms in 100 molecules of cholesterol.
 
 Each of these distributions has a different shape and, therefore, a different mathematical form, which is one focus of this module. Before continuing, take a moment to make note of the similarities and differences in the pattern of the data in these data sets, and in the way these data sets are presented.

@@ -2,6 +2,7 @@
 
 library(shiny)
 library(shinythemes)
+library(shinyBS)
 
 ui = navbarPage("AC 3.0: Distributions of Data",
                 theme = shinytheme("journal"),
@@ -10,6 +11,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                             type = "text/css",
                             href = "style.css")
                 ),
+                
                 # open first tab
                 tabPanel("Introduction",
                  fluidRow(
@@ -25,6 +27,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 )
                 ), # close first tab
                 
+                # open second tab
                 tabPanel("Copper/Sulfur Ratio",
                   column(width = 6,
                     wellPanel(
@@ -48,7 +51,9 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ),
                       plotOutput("activity1plot", height = "600px")
                 )
-                ),
+                ), # close second tab
+                
+                # open third tab
                 tabPanel("Beta Emission",
                   column(width = 6,
                     wellPanel(
@@ -58,19 +63,23 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          
                  column(width = 6,
                   align = "center",
-                   splitLayout(
-                  sliderInput("lambda","average rate: particles per 7 s",
-                                  min = 0, max = 13, value = 13, step = 0.1),
+                  splitLayout(
+                  sliderInput("lambda",
+                              "average rate: particles per 7 s", 
+                              min = 0, max = 13, value = 13, 
+                              step = 0.1),
                   downloadButton("betadata","download data")
                                 ),
                   
                                 plotOutput("activity2plot", height = "600px")
                 )
-                ),
+                ), # close third tab
+                
+                # open fourth tab
                 tabPanel("Pipettes",
                   column(width = 6,
                     wellPanel(
-                              includeHTML("activity3.html")
+                      includeHTML("activity3.html")
                 )     
                 ),
                          
@@ -83,10 +92,12 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                                    value = 10, step= 1, width = "400px"),
                        downloadButton("pipetdata","download data")
                               ),
-                                plotOutput("activity3plot", height = "600px")
+                                plotOutput("activity3plot", 
+                                           height = "600px")
                          )
-                ),
+                ), # close fourth tab
                 
+                # open fifth tab
                 tabPanel("Cholesterol",
                   column(width = 6,
                     wellPanel(
@@ -97,20 +108,26 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                   column(width = 6,
                          align = "center",
                     splitLayout(
-                                sliderInput("size","number of carbon atoms (n)",
+                                sliderInput("size",
+                                            "number of carbon atoms (n)",
                                             min = 1, max = 50, value = 25,
                                             step = 1, width = "200px"),
-                                sliderInput("prob","probability of C-13 (p)",
+                                sliderInput("prob",
+                                            "probability of C-13 (p)",
                                             min = 0, max = 1, value = 0.5,
                                             step = 0.001, width = "200px"),
                                 downloadButton("choldata","download data")
                                 ),
-                                plotOutput("activity4plot", height = "600px")
+                                plotOutput("activity4plot", 
+                                           height = "600px")
                          )
-                ),
+                ), # close fifth tab
+                
+                # open sixth tab
                 tabPanel("Wrapping Up",
                          column(width = 6,
-                                wellPanel(
+                                wellPanel(id = "wrapupPanel",
+                                          style = "overflow-y:scroll; max-height: 750px",
                                   includeHTML("wrapup.html")
                                 )     
                          ),
@@ -120,9 +137,32 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                                 splitLayout(
                                   # inputs here
                                 ),
-                                plotOutput("wrapupplot1", height = "600px")
+                                plotOutput("wrapupplot1", 
+                                           height = "600px")
                          )
-                )
+                ), # close sixth tab
+                
+                # tooltips
+                bsTooltip(id = "cus_mean",
+                          title = "Adjust the mean value for the normal distribution."),
+                bsTooltip(id = "cus_sd",
+                          title = "Adjust the standard deviation for the normal distribution."),
+                bsTooltip(id = "cusdata",
+                          title = "Download the original data."),
+                bsTooltip(id = "lambda",
+                          title = "Adjust the average rate of emission."),
+                bsTooltip(id = "betadata",
+                          title = "Download the original data."),
+                bsTooltip(id = "bins",
+                          title = "Adjust the number of bins for histogram."),
+                bsTooltip(id = "pipetdata",
+                          title = "Download the original data."),
+                bsTooltip(id = "size",
+                          title = "Set the number of carbon atoms."),
+                bsTooltip(id = "prob",
+                          title = "Set the probability for C-13."),
+                bsTooltip(id = "choldata",
+                          title = "Download the original data.")
                 
   ) # close navbarPage
 
