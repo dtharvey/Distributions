@@ -2,11 +2,10 @@
 
 library(shiny)
 library(shinythemes)
-library(shinyBS)
 
 ui = navbarPage("AC 3.0: Distributions of Data",
                 theme = shinytheme("journal"),
-                tags$head(
+                header = tags$head(
                   tags$link(rel = "stylesheet",
                             type = "text/css",
                             href = "style.css")
@@ -17,7 +16,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                  fluidRow(
                   column(width = 6,
                    wellPanel(
-                     includeHTML("introduction.html")
+                     includeHTML("text/introduction.html")
                 )
                 ),
                   column(width = 6,
@@ -31,7 +30,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 tabPanel("Copper/Sulfur Ratio",
                   column(width = 6,
                     wellPanel(
-                      includeHTML("activity1.html")
+                      includeHTML("text/activity1.html")
                 )     
                 ),
                 
@@ -57,7 +56,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 tabPanel("Beta Emission",
                   column(width = 6,
                     wellPanel(
-                      includeHTML("activity2.html")
+                      includeHTML("text/activity2.html")
                 )     
                 ),
                          
@@ -79,7 +78,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 tabPanel("Pipettes",
                   column(width = 6,
                     wellPanel(
-                      includeHTML("activity3.html")
+                      includeHTML("text/activity3.html")
                 )     
                 ),
                          
@@ -101,7 +100,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 tabPanel("Cholesterol",
                   column(width = 6,
                     wellPanel(
-                               includeHTML("activity4.html")
+                               includeHTML("text/activity4.html")
                                 )     
                          ),
                          
@@ -128,7 +127,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          column(width = 6,
                                 wellPanel(id = "wrapupPanel",
                                           style = "overflow-y:scroll; max-height: 750px",
-                                  includeHTML("wrapup.html")
+                                  includeHTML("text/wrapup.html")
                                 )     
                          ),
                          
@@ -140,29 +139,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                                 plotOutput("wrapupplot1", 
                                            height = "600px")
                          )
-                ), # close sixth tab
-                
-                # tooltips
-                bsTooltip(id = "cus_mean",
-                          title = "Adjust the mean value for the normal distribution."),
-                bsTooltip(id = "cus_sd",
-                          title = "Adjust the standard deviation for the normal distribution."),
-                bsTooltip(id = "cusdata",
-                          title = "Download the original data."),
-                bsTooltip(id = "lambda",
-                          title = "Adjust the average rate of emission."),
-                bsTooltip(id = "betadata",
-                          title = "Download the original data."),
-                bsTooltip(id = "bins",
-                          title = "Adjust the number of bins for histogram."),
-                bsTooltip(id = "pipetdata",
-                          title = "Download the original data."),
-                bsTooltip(id = "size",
-                          title = "Set the number of carbon atoms."),
-                bsTooltip(id = "prob",
-                          title = "Set the probability for C-13."),
-                bsTooltip(id = "choldata",
-                          title = "Download the original data.")
-                
+                ) # close sixth tab
+              
   ) # close navbarPage
 

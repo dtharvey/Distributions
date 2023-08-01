@@ -4,15 +4,17 @@ library(shiny)
 library(shinythemes)
 
 # place files needed by app here
-cuxs = read.csv(file = "coppersulfide.csv", header = TRUE)
-betaparticles = read.csv(file = "betaparticles.csv", header = TRUE)
-cholesterol = read.csv(file = "cholesterol.csv", header = TRUE)
-pipets = read.csv(file = "pipets.csv", header = TRUE)
+
+cuxs = read.csv(file = "data/coppersulfide.csv", header = TRUE)
+betaparticles = read.csv(file = "data/betaparticles.csv", header = TRUE)
+cholesterol = read.csv(file = "data/cholesterol.csv", header = TRUE)
+pipets = read.csv(file = "data/pipets.csv", header = TRUE)
 
 # set colors
+
 palette("Okabe-Ito")
 
-shinyServer(function(input,output){
+shinyServer(function(input,output,session){
   
   # output for introduction
   
@@ -92,7 +94,7 @@ shinyServer(function(input,output){
   
   output$activity3plot = renderPlot({
     old.par = par(lwd = 3)
-    hist(pipets$x, breaks = seq(9.98,10.02, 0.04/input$bins), 
+    hist(pipets$x, breaks = seq(9.98,10.02, 0.04/input$bins),
          col = 8, border = 1, labels = TRUE,
          xlab = "volume of pipet (mL)", ylab = "number of pipets",
          main = "Certification of Class A 10-mL Pipettes")

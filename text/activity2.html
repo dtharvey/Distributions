@@ -11,7 +11,7 @@
 
 
 
-<title>activity3.knit</title>
+<title>activity2.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,26 +352,56 @@ display: none;
 </div>
 
 
-<div id="the-uniform-distribution-certification-of-class-a-10-ml-pipettes" class="section level4">
-<h4>The Uniform Distribution: Certification of Class A 10-mL
-Pipettes</h4>
-<p>The figure on the right is a histogram that shows the distribution of
-certified volumes for 1000 10-mL volumetric pipettes. The number of
-pipets in each of the histogram’s bins is shown at the top of the bin. A
-pipet’s certified tolerance is the range of volumes around the pipet’s
-expected volume, which in for a Class A 10-mL pipet is <span class="math inline">\(10.00 \pm 0.02\)</span> mL. A pipette with a
-volume outside this range is discarded.</p>
-<p>Q1. Is this data continuous or discrete? How do you know?</p>
-<p>Q2. This distribution is described as uniform. What does it mean to
-be uniform? What will happen to the shape of this distribution and the
-counts in each bin if you increase or decrease the number of bins? Use
-the slider to check your prediction.</p>
-<p>Q3. For a uniform distribution, the mean is <span class="math inline">\(\frac{a+b}{2}\)</span> and the standard deviation
-is <span class="math inline">\(\sqrt{\frac{1}{12}(a - b)^2}\)</span>
-where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are, respectively, the distribution’s
-largest and smallest values. Calculate the expected mean and standard
-deviation for Class A 10-mL pipets and then download the data and check
-your result by calculating the actual mean and standard deviation.</p>
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+<!-- text for activity 2 -->
+<div id="the-poisson-distribution-emission-of-beta-particles-from-40k" class="section level4">
+<h4>The Poisson Distribution: Emission of Beta Particles from
+<sup>40</sup>K</h4>
+<p>The figure on the right is a barplot that shows the number of beta
+particles emitted by a sample of <sup>40</sup>K during 365 consecutive
+7-s intervals. In some intervals, no beta particles were emitted; in
+other intervals, as many as 13 beta particles were emitted.</p>
+<p><strong>Exercise 2</strong>. Although a barplot and a histogram look
+similar, they are not interchangeable. A histogram is useful for
+continuous data and a barplot is useful for discrete data. Why are the
+results of beta emission considered discrete instead of continuous?</p>
+<p><strong>Exercise 1</strong>. The data in this experiment follow a
+Poisson distribution in which the probability of a particular outcome,
+<span class="math inline">\(p(x)\)</span>, in a fixed period of time is
+given by the equation <span class="math display">\[p(x) =
+\frac{\lambda^x e^{-\lambda}}{x!}\]</span> where <span class="math inline">\(\lambda\)</span> is the average rate of beta
+emission and where the exclamation point indicates the factorial. For
+the Cu<sub><em>x</em></sub>S data we drew the theoretical distribution
+as a smooth line, but here we show only a set of points connected by
+line segments. Explain why we can display the normal distribution as a
+smooth line, but cannot do so with a Poisson distribution.</p>
+<p><strong>Exercise 3</strong>. How does the shape of the Poisson
+distribution change as you adjust the value of <span class="math inline">\(\lambda\)</span> from 0 to 13?</p>
+<p><strong>Exercise 4</strong>. Use the slider to determine the value of
+<span class="math inline">\(\lambda\)</span> for this data. Use your
+value of <span class="math inline">\(\lambda\)</span> to calculate the
+probability that a single beta particle is emitted, <em>p(x = 1)</em>.
+Explain how to convert this probability into a number of events and
+compare this result to the data in the figure.</p>
+<p><strong>Exercise 5</strong>. The mean for a Poisson distribution is
+equal to <span class="math inline">\(\lambda\)</span> and its standard
+deviation is equal to <span class="math inline">\(\sqrt{\lambda}\)</span>. Report the mean and
+standard deviation for this data using your value for <span class="math inline">\(\lambda\)</span> and then download the data and
+check your result by calculating the actual mean and standard
+deviation.</p>
 </div>
 
 

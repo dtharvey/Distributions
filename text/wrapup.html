@@ -11,7 +11,7 @@
 
 
 
-<title>activity1.knit</title>
+<title>wrapup.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,41 +352,65 @@ display: none;
 </div>
 
 
-<!-- activity 1 -->
-<div id="the-normal-distribution-coppersulfur-ratio-in-copper-sulfide" class="section level4">
-<h4>The Normal Distribution: Copper/Sulfur Ratio in Copper Sulfide</h4>
-<p>The figure on the right is a histogram for 62 measurements of
-<em>x</em>, the ratio of the moles of copper to the moles of sulfur in
-Cu<sub><em>x</em></sub>S in samples prepared by igniting Cu and S. The
-value of <em>x</em> is considered continuous as it can take on any value
-within the limits of our instrument’s capabilities, in this case a
-balance that records mass to the nearest ±0.0001 g.</p>
-<p>Q1. A histogram shows the frequency for a range of possible outcomes,
-called a bin. The bin on the far-left, for example, shows that one of
-the 62 trials has a value for <em>x</em> in the range 1.760–1.775. Why
-do we need to bin the data to create a useful histogram?</p>
-<p>Q2. The data in this experiment follows a normal distribution
-described by the equation</p>
-<p><span class="math display">\[p(x) = \frac{1}{\sigma \sqrt{2
-\pi}}e^{-(x - \mu)^2/(2 \sigma^2)}\]</span></p>
-<p>where <span class="math inline">\(p(x)\)</span> is the probability of
-a given outcome, <span class="math inline">\(\mu\)</span> is the mean
-(average), and <span class="math inline">\(\sigma\)</span> is the
-standard deviation. The dashed line overlaid on the histogram shows the
-normal distribution for the mean and standard deviation set by the
-sliders. Use the sliders to explore how the mean and the standard
-deviation affect the normal distribution’s position, width, and overall
-shape. Explain how your observations are consistent with the equation
-for a normal distribution.</p>
-<p>Q3. Adjust the mean and the standard deviation to provide the best
-fit of the normal distribution equation to the histogram. When you are
-satisfied with your fit, download the data and calculate the
-experimental mean and standard deviation, Compare these values to your
-estimated values from fitting the equation to the data.</p>
-<p>Q4. A normal distribution assumes all samples come from a population
-with a single mean and standard deviation. Suppose our 62 samples came
-from two populations, one where sulfur was used in excess and one where
-it was not. Describe the shape of the resulting histogram.</p>
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+<!-- text for summary -->
+<div id="source-of-data" class="section level4">
+<h4>Source of Data</h4>
+<p>Of the four data sets in this module, only the
+Cu<sub><em>x</em></sub>S data is from an actual experiment (completed by
+students at DePauw University in the 1990s). See <a href="https://doi.org/10.1016/S0040-6031(00)00545-1">Blanchnik, R.;
+Müller, A. “The Formation of Cu<sub><em>x</em></sub>S From the Elements
+I. Copper Used in Form of Powders,” Thermochim. Acta, 2000, 361,
+31-52</a> for a discussion of some of the factors that affect the
+formation of non-stoichiometric copper sulfide.</p>
+<p>The other three data sets were created using <code>R</code> to
+simulate samples drawn at random from (a) a poisson distribution using a
+<span class="math inline">\(\lambda\)</span> of 5 particles per 7
+seconds (<span class="math inline">\(n = 365\)</span> samples) and the
+<code>rpois()</code> function, (b) a uniform distribution using a
+minimum value of 9.98 and a maximum value of 10.02 (<span class="math inline">\(n = 1000\)</span> samples) and the
+<code>runif()</code> function, and (c) a binomial distribution using a
+size of 27, a probability of 0.0111 (<span class="math inline">\(n =
+100\)</span> samples), and the <code>rbinom()</code> fuction. All three
+of these data sets, however, are representative of the expected results
+for these systems.</p>
+</div>
+<div id="other-types-of-distributions" class="section level4">
+<h4>Other Types of Distributions</h4>
+<p>There are others types of distributions, one of which is an
+exponential distribution where the probability of an event, <span class="math inline">\(p(x)\)</span>, as a function of time, <em>t</em>,
+is given by the equation <span class="math display">\[p(x) = \lambda
+e^{-\lambda t}\]</span> where <span class="math inline">\(\lambda\)</span> is the average rate at which the
+event occurs. The emission of beta particles from <sup>40</sup>K, which
+we considered earlier using a Poisson distribution, has an average rate
+of 5 particles per 7 seconds, or 0.714 particles/second. The figure on
+the right shows a histogram of the distribution of elapsed times between
+the emission of beta particles with an overlay of the expected
+distribution using the equation above. The most common elapsed time is
+between 0 and 1 seconds, and there is little likelihood of a delay
+exceeding 8 seconds. Interestingly, the individual rates of beta
+emission follow a discrete distribution and the individual times between
+emission follow a continuous distribution.</p>
+</div>
+<div id="additional-resources" class="section level4">
+<h4>Additional Resources</h4>
+<p>For a more in depth discussion of the distributions considered in
+this module, including examples of R code for simulating and plotting
+distributions, see Chapter 5 in <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/05%3A_The_Distribution_of_Data">Chemometrics
+Using R</a>, which is available through the <a href="https://libretexts.org/">LibreText Project</a>.</p>
 </div>
 
 

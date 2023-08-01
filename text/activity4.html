@@ -11,7 +11,7 @@
 
 
 
-<title>wrapup.knit</title>
+<title>activity4.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,52 +352,47 @@ display: none;
 </div>
 
 
-<div id="source-of-data" class="section level4">
-<h4>Source of Data</h4>
-<p>Of the four data sets in this module, only the
-Cu<sub><em>x</em></sub>S data is from an actual experiment (completed by
-students at DePauw University in the 1990s). See <a href="https://doi.org/10.1016/S0040-6031(00)00545-1">Blanchnik, R.;
-Müller, A. “The Formation of Cu<sub><em>x</em></sub>S From the Elements
-I. Copper Used in Form of Powders,” Thermochim. Acta, 2000, 361,
-31-52</a> for a discussion of some of the factors that affect the
-formation of non-stoichiometric copper sulfide.</p>
-<p>The other three data sets were created using <em>R</em> to simulate
-samples drawn at random from (a) a poisson distribution using a <span class="math inline">\(\lambda\)</span> of 5 particles per 7 seconds
-(<span class="math inline">\(n = 365\)</span> samples), (b) a uniform
-distribution using a minimum value of 9.98 and a maximum value of 10.02
-(<span class="math inline">\(n = 1000\)</span> samples), and (c) a
-binomial distribution using a size of 27 and a probability of 0.0111
-(<span class="math inline">\(n = 100\)</span> samples. All three of
-these data sets, however, are representative of the expected results for
-these systems.</p>
-</div>
-<div id="other-types-of-distributions" class="section level4">
-<h4>Other Types of Distributions</h4>
-<p>There are others types of distributions, one of which is an
-exponential distribution where the probability of an event, <span class="math inline">\(p(x)\)</span>, as a function of time, <em>t</em>,
-is given by the equation</p>
-<p><span class="math display">\[p(x) = \lambda e^{-\lambda
-t}\]</span></p>
-<p>where <span class="math inline">\(\lambda\)</span> is the average
-rate at which the event occurs. The emission of beta particles from
-<sup>40</sup>K, which we considered earlier using a Poisson
-distribution, has an average rate of 5 particles per 7 seconds, or 0.714
-particles/second. The figure on the right shows a histogram of the
-distribution of the elapsed times between the emission of beta particles
-with an overlay of the expected distribution using the equation above.
-The most common elapsed time is between 0 and 1 seconds, and there is
-little likelihood of a delay exceeding 8 seconds. Interestingly, the
-individual rates of beta emission follow a discrete distribution and the
-individual times between emission follow a continuous distribution.</p>
-</div>
-<div id="additional-resources" class="section level4">
-<h4>Additional Resources</h4>
-<p>For a more in depth discussion of the distributions considered in
-this module, including examples of R code for simulating and plotting
-distributions, see Chapter 5 in <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/05%3A_The_Distribution_of_Data">Chemometrics
-Using R</a>. Additional coverage is found in Chapter 4.4 of <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/04%3A_Evaluating_Analytical_Data/4.04%3A_The_Distribution_of_Measurements_and_Results">Analyitical
-Chemistry 2.1</a> and in Chapter 35.1 of <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)/35%3A_Appendicies/35.01%3A_Evaluation_of_Analytical_Data">Instrumental
-Analysis</a>. All three texts are available through the <a href="https://libretexts.org/">LibreText</a> project.</p>
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+<!-- text for activity 4 -->
+<div id="the-binomial-distribution-13c-atoms-in-cholesterol" class="section level4">
+<h4>The Binomial Distribution: <sup>13</sup>C Atoms in Cholesterol</h4>
+<p>The figure on the right is a barplot that shows, for 100 molecules of
+cholesterol, the number that have 0, 1, 2, 3, 4, or 5 atoms of
+<sup>13</sup>C, as determined by mass spectrometry.</p>
+<p><strong>Exercise 1</strong>. Is this data continuous or discrete? How
+do you know?</p>
+<p><strong>Exercise 2</strong>. The data in this experiment follow a
+binomial distribution in which the probability of a particular outcome,
+<span class="math inline">\(p(x)\)</span>, is given by the equation
+<span class="math display">\[p(x) = \frac{n!}{x!(n - x)!} \times p^{x}
+\times (1 - p)^{n - x}\]</span> where <em>n</em> is the number of
+carbons atoms in cholesterol (also called the size), <em>x</em> is the
+number of <sup>13</sup>C atoms in a molecule, and <em>p</em> is the
+probability that a randomly selected carbon atom is <sup>13</sup>C. Do
+some research to determine (a) the number of carbon atoms in cholesterol
+and (b) the probability that an atom of carbon is <sup>13</sup>C. Adjust
+the sliders to these values and comment on the fit of the equation to
+the data.</p>
+<p><strong>Exercise 3</strong>. The mean for a binomial distribution is
+equal to <span class="math inline">\(n \times p\)</span> and its
+standard deviation is equal to <span class="math inline">\(\sqrt{n
+\times p \times (1-p)}\)</span>. Report the mean and the standard
+deviation for this data using your values for <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>, and then download the data and then
+check your result by calculating the actual mean and standard
+deviation.</p>
 </div>
 
 

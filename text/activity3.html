@@ -11,7 +11,7 @@
 
 
 
-<title>introduction.knit</title>
+<title>activity3.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,46 +352,44 @@ display: none;
 </div>
 
 
-<!-- introduction -->
-<p>The plots on the right show the distribution of results for four
-experiments. Each plot shows the frequency of a particular outcome on
-the <em>y</em>-axis as a function of possible outcomes on the
-<em>x</em>-axis. These experiments are:</p>
-<p><strong>Copper/Sulfur Ratio in Copper Sulfide</strong>. If we mix
-powdered copper metal with a stoichiometric excess of powdered sulfur
-and ignite them in a crucible, copper (I) sulfide forms with an
-empirical formula of Cu<sub><em>x</em></sub>S. The value of <em>x</em>
-is determined by weighing the Cu before ignition and then determining
-the mass of Cu<sub><em>x</em></sub>S when the reaction is complete; any
-excess sulfur is removed as SO<sub>2</sub>. The plot in the upper-left
-corner shows the distribution of the values of <em>x</em> for 62
-trials.</p>
-<p><strong>Emission of Beta Particles from <sup>40</sup>K</strong>. In
-beta emission, an unstable neutron is converted into an electron and a
-proton. The proton remains in the nucleus, increasing the atom’s atomic
-number by one, and the electron is ejected as a beta particle. The plot
-in the upper-right corner shows the distribution of the number of beta
-particles emitted from a sample of <sup>40</sup>K during each of 365
-consecutive 7-s intervals.</p>
-<p><strong>Certification of Class A 10-mL Pipettes</strong>. A class A
-pipette is designed to deliver a calibrated volume of liquid. Each pipet
-has a unique identification number and carries a certificate that states
-its precise calibrated volume traced to a NIST-approved standard. The
-plot in the lower-left corner shows the distribution of the calibration
-results for 1000 Class A 10-mL pipettes.</p>
-<p><sup><strong>13</strong></sup><strong>C Atoms in
-Cholesterol</strong>. Carbon has two stable isotopes: <sup>12</sup>C and
-<sup>13</sup>C. Because <sup>12</sup>C is much more abundant than
-<sup>13</sup>C, most organic molecules have no atoms of <sup>13</sup>C;
-a few molecules, however, will contain one or more atoms of
-<sup>13</sup>C. The plot in the lower-right corner shows the
-distribution of the number of <sup>13</sup>C atoms in 100 molecules of
-cholesterol.</p>
-<p>Each of these distributions has a different shape and, therefore, a
-different mathematical form, which is one focus of this module. Before
-continuing, take a moment to make note of the similarities and
-differences in the pattern of the data in these data sets, and in the
-way these data sets are presented.</p>
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+<!-- text for activity 3 -->
+<div id="the-uniform-distribution-certification-of-class-a-10-ml-pipettes" class="section level4">
+<h4>The Uniform Distribution: Certification of Class A 10-mL
+Pipettes</h4>
+<p>The figure on the right is a histogram that shows the distribution of
+certified volumes for 1000 10-mL volumetric pipettes. The number of
+pipets in each of the histogram’s bins is shown at the top of the bin. A
+pipet’s certified tolerance is the range of volumes around the pipet’s
+expected volume, which for a Class A 10-mL pipet is <span class="math inline">\(10.00 \pm 0.02\)</span> mL. A pipette with a
+volume outside this range is discarded.</p>
+<p><strong>Exercise 1</strong>. Is this data continuous or discrete? How
+do you know?</p>
+<p><strong>Exercise 2</strong>. This distribution is described as
+uniform. What does it mean to be uniform? What happens to the shape of
+this distribution and the counts in each bin if you increase or decrease
+the number of bins? Use the slider to check your prediction.</p>
+<p><strong>Exercise 3</strong>. For a uniform distribution, the mean is
+<span class="math inline">\(\frac{a+b}{2}\)</span> and the standard
+deviation is <span class="math inline">\(\sqrt{\frac{1}{12}(a -
+b)^2}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are, respectively, the distribution’s
+largest and smallest values. Calculate the expected mean and standard
+deviation for Class A 10-mL pipets and then download the data and check
+your result by calculating the actual mean and standard deviation.</p>
+</div>
 
 
 

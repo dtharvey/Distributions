@@ -1,0 +1,41 @@
+---
+output: html_document
+---
+
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+```
+
+<!-- text for activity 1 -->
+
+#### The Normal Distribution: Copper/Sulfur Ratio in Copper Sulfide
+
+The figure on the right is a histogram for 62 measurements of *x*, the ratio of the moles of copper to the moles of sulfur in Cu~*x*~S samples prepared by igniting Cu and S. 
+
+**Exercise 1**. The value of *x* is considered continuous. What does it mean to say that *x* is continuous and why does measuring mass yield continuous data?
+
+**Exercise 2**. A histogram shows the frequency for a range of possible outcomes, called a bin. The bin on the far-left, for example, shows that one of the 62 trials has a value for *x* in the range 1.760--1.775. Why do we need to bin the data to create a useful histogram?
+
+**Exercise 3**. The data in this experiment follows a normal distribution described by the equation
+
+$$p(x) = \frac{1}{\sigma \sqrt{2 \pi}}e^{-(x - \mu)^2/(2 \sigma^2)}$$
+
+where $p(x)$ is the probability of a given outcome, $\mu$ is the mean (average), and $\sigma$ is the standard deviation. The dashed line overlaid on the histogram shows the normal distribution for the mean and standard deviation set by the sliders. Use the sliders to explore how the mean and the standard deviation affect the normal distribution's position, width, and overall shape. Explain how your observations are consistent with the equation for a normal distribution.
+
+**Exercise 4**. Adjust the mean and the standard deviation to provide the best fit of the normal distribution equation to the histogram. When you are satisfied with your fit, download the data and calculate the experimental mean and standard deviation, Compare these values to your estimated values from fitting the equation to the data.
+
+**Exercise 5**. A normal distribution assumes all samples come from a population with a single mean and standard deviation. Suppose these 62 samples come from two populations, one where sulfur was used in excess and one where it was not. Describe the shape of the resulting histogram.

@@ -1,6 +1,6 @@
-# Distributions
+# Distributions of Data
  
-A multi-page application in a more active-learning format that relates the visual observations of the results of four experiments—one of which is data collected by students and three that are simulations—with the mathematical form of the distribution of their results. The types of distributions considered are normal, binomial, uniform, and Poisson.    
+Students are introduced to four common distributions of experimental data: the normal distribution, the Poisson distribution, the uniform distribution, and the binomial distribution. Each distribution is modeled using a data set that is either real or simulated. The mathematical model for each distribution is presented and students can adjust a model's parameters to fit the mathematical model to the data. The data sets can be downloaded as .csv spreadsheet files.   
 
 To run locally, install the package Shiny (if not already installed), and enter the following two lines into the console:
 

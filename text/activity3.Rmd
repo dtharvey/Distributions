@@ -1,0 +1,34 @@
+---
+output: html_document
+---
+
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+```
+
+<!-- text for activity 3 -->
+
+#### The Uniform Distribution: Certification of Class A 10-mL Pipettes
+
+The figure on the right is a histogram that shows the distribution of certified volumes for 1000 10-mL volumetric pipettes. The number of pipets in each of the histogram's bins is shown at the top of the bin. A pipet's certified tolerance is the range of volumes around the pipet's expected volume, which for a Class A 10-mL pipet is $10.00 \pm 0.02$ mL. A pipette with a volume outside this range is discarded.
+
+**Exercise 1**. Is this data continuous or discrete? How do you know?
+
+**Exercise 2**. This distribution is described as uniform. What does it mean to be uniform? What happens to the shape of this distribution and the counts in each bin if you increase or decrease the number of bins? Use the slider to check your prediction.
+
+**Exercise 3**. For a uniform distribution, the mean is $\frac{a+b}{2}$ and the standard deviation is $\sqrt{\frac{1}{12}(a - b)^2}$, where $a$ and $b$ are, respectively, the distribution's largest and smallest values. Calculate the expected mean and standard deviation for Class A 10-mL pipets and then download the data and check your result by calculating the actual mean and standard deviation.
+

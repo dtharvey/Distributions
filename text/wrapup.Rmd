@@ -1,0 +1,39 @@
+---
+output: html_document
+---
+
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+```
+
+<!-- text for summary -->
+
+#### Source of Data
+
+Of the four data sets in this module, only the Cu~*x*~S data is from an actual experiment (completed by students at DePauw University in the 1990s). See [Blanchnik, R.; Müller, A. "The Formation of Cu~*x*~S From the Elements I. Copper Used in Form of Powders," Thermochim. Acta, 2000, 361, 31-52](https://doi.org/10.1016/S0040-6031(00)00545-1) for a discussion of some of the factors that affect the formation of non-stoichiometric copper sulfide.
+
+The other three data sets were created using `R` to simulate samples drawn at random from (a) a poisson distribution using a $\lambda$ of 5 particles per 7 seconds ($n = 365$ samples) and the `rpois()` function, (b) a uniform distribution using a minimum value of 9.98 and a maximum value of 10.02 ($n = 1000$ samples) and the `runif()` function, and (c) a binomial distribution using a size of 27, a probability of 0.0111 ($n = 100$ samples), and the `rbinom()` fuction. All three of these data sets, however, are representative of the expected results for these systems.
+
+#### Other Types of Distributions
+
+There are others types of distributions, one of which is an exponential distribution where the probability of an event, $p(x)$, as a function of time, *t*, is given by the equation
+$$p(x) = \lambda e^{-\lambda t}$$
+where $\lambda$ is the average rate at which the event occurs. The emission of beta particles from ^40^K, which we considered earlier using a Poisson distribution, has an average rate of 5 particles per 7 seconds, or 0.714 particles/second. The figure on the right shows a histogram of the distribution of elapsed times between the emission of beta particles with an overlay of the expected distribution using the equation above. The most common elapsed time is between 0 and 1 seconds, and there is little likelihood of a delay exceeding 8 seconds. Interestingly, the individual rates of beta emission follow a discrete distribution and the individual times between emission follow a continuous distribution.
+
+#### Additional Resources
+
+For a more in depth discussion of the distributions considered in this module, including examples of R code for simulating and plotting distributions, see Chapter 5 in [Chemometrics Using R](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/05%3A_The_Distribution_of_Data), which is available through the [LibreText Project](https://libretexts.org/). 
