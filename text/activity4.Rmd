@@ -1,24 +1,26 @@
 ---
-output: html_document
+output: html_fragment
 ---
 
 <!-- The following script makes it possible to use the mhchem -->
 <!-- latex package in a .Rmd file and to knit it into an .html file -->
 <!-- the font size is scaled to 90% to match text -->
 
-```{=html}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-    extensions: ["[Contrib]/mhchem/mhchem.js"]
-}
-});
-MathJax.Hub.Config({ 
-        "HTML-CSS": { scale: 90 }, 
-        SVG: { linebreaks: { automatic:true } }, 
- });
-</script>
-```
+<!-- ```{=html} -->
+<!-- <script type="text/x-mathjax-config"> -->
+<!--   MathJax.Ajax.config.path["mhchem"] = -->
+<!--     "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2"; -->
+<!--   MathJax.Hub.Config({ -->
+<!--     TeX: { -->
+<!--       extensions: ["[mhchem]/mhchem.js"] -->
+<!--     } -->
+<!--   }); -->
+<!--   MathJax.Hub.Config({  -->
+<!--     "HTML-CSS": { scale: 90 },  -->
+<!--     SVG: { linebreaks: { automatic:true } },  -->
+<!--   }); -->
+<!--   </script> -->
+<!-- ``` -->
 
 <!-- text for activity 4 -->
 
@@ -30,6 +32,6 @@ The figure on the right is a barplot that shows, for 100 molecules of cholestero
 
 **Exercise 2**. The data in this experiment follow a binomial distribution in which the probability of a particular outcome, $p(x)$, is given by the equation
 $$p(x) = \frac{n!}{x!(n - x)!} \times p^{x} \times (1 - p)^{n - x}$$
-where *n* is the number of carbons atoms in cholesterol (also called the size), *x* is the number of ^13^C atoms in a molecule, and *p* is the probability that a randomly selected carbon atom is ^13^C. Do some research to determine (a) the number of carbon atoms in cholesterol and (b) the probability that an atom of carbon is ^13^C. Adjust the sliders to these values and comment on the fit of the equation to the data.
+where *n* is the number of carbons atoms in cholesterol (also called the size), *x* is the number of ^13^C atoms in a molecule, and *p* is the probability that a randomly selected carbon atom is ^13^C. The exclamation point indicates the factorial (e.g. $3! = 3 \times 2 \times 1 = 6$). Do some research to determine (a) the number of carbon atoms in cholesterol and (b) the probability that an atom of carbon is ^13^C. Adjust the sliders to these values and comment on the fit of the equation to the data.
 
 **Exercise 3**. The mean for a binomial distribution is equal to $n \times p$ and its standard deviation is equal to $\sqrt{n \times p \times (1-p)}$. Report the mean and the standard deviation for this data using your values for $n$ and $p$, and then download the data and then check your result by calculating the actual mean and standard deviation.

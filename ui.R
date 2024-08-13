@@ -14,6 +14,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 # open first tab
                 tabPanel("Introduction",
                  fluidRow(
+                  withMathJax(),
                   column(width = 6,
                    wellPanel(
                      includeHTML("text/introduction.html")
@@ -27,7 +28,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ), # close first tab
                 
                 # open second tab
-                tabPanel("Copper/Sulfur Ratio",
+                tabPanel("Normal Distribution",
                   column(width = 6,
                     wellPanel(
                       includeHTML("text/activity1.html")
@@ -53,7 +54,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ), # close second tab
                 
                 # open third tab
-                tabPanel("Beta Emission",
+                tabPanel("Poisson Distribution",
                   column(width = 6,
                     wellPanel(
                       includeHTML("text/activity2.html")
@@ -75,7 +76,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ), # close third tab
                 
                 # open fourth tab
-                tabPanel("Pipettes",
+                tabPanel("Uniform Distribution",
                   column(width = 6,
                     wellPanel(
                       includeHTML("text/activity3.html")
@@ -97,7 +98,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ), # close fourth tab
                 
                 # open fifth tab
-                tabPanel("Cholesterol",
+                tabPanel("Binomial Distribution",
                   column(width = 6,
                     wellPanel(
                                includeHTML("text/activity4.html")
