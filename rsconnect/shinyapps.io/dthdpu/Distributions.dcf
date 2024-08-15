@@ -5,9 +5,7 @@ account: dthdpu
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7381422
-bundleId: 7519458
+bundleId: 8978442
 url: https://dthdpu.shinyapps.io/Distributions/
-when: 1690903973.92658
-lastSyncTime: 1690903973.92659
 asMultiple: FALSE
 asStatic: FALSE
