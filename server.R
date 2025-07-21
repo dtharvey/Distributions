@@ -1,23 +1,8 @@
 # server for distribution app
 
-library(shiny)
-library(shinythemes)
-
-# place files needed by app here
-
-cuxs = read.csv(file = "data/coppersulfide.csv", header = TRUE)
-betaparticles = read.csv(file = "data/betaparticles.csv", header = TRUE)
-cholesterol = read.csv(file = "data/cholesterol.csv", header = TRUE)
-pipets = read.csv(file = "data/pipets.csv", header = TRUE)
-
-# set colors
-
-palette("Okabe-Ito")
-
 shinyServer(function(input,output,session){
   
-  # output for introduction
-  
+# output for introduction
   output$introplot = renderPlot({
     set.seed(2009)
     old.par = par(mfrow = c(2,2), lwd = 3)
@@ -47,6 +32,7 @@ shinyServer(function(input,output,session){
     
   })
   
+# output for first activity
   output$activity1plot = renderPlot({
     
     old.par = par(lwd = 3)
@@ -70,6 +56,7 @@ shinyServer(function(input,output,session){
       write.csv(cuxs$x,file)
     })
   
+# outpupt for second activity
   output$activity2plot = renderPlot({
     old.par = par(lwd = 3)
     beta_bar = barplot(height = betaparticles$y, col = 8, border = 1,
@@ -91,7 +78,8 @@ shinyServer(function(input,output,session){
     content = function(file){
       write.csv(rep(betaparticles$x, betaparticles$y),file)
     })
-  
+
+# output for third activity 
   output$activity3plot = renderPlot({
     old.par = par(lwd = 3)
     hist(pipets$x, breaks = seq(9.98,10.02, 0.04/input$bins),
@@ -107,6 +95,7 @@ shinyServer(function(input,output,session){
       write.csv(pipets$x,file)
     })
   
+# output for fourth activity
   output$activity4plot = renderPlot({
     old.par = par(lwd = 3)
     chol_bar = barplot(height = cholesterol$y, 
@@ -130,6 +119,7 @@ shinyServer(function(input,output,session){
     content = function(file){
       write.csv(rep(cholesterol$x, cholesterol$y),file)})
   
+# output for wrap-up
   output$wrapupplot1 = renderPlot({
     
   set.seed(13)

@@ -1,8 +1,5 @@
 # user interface for distributions
 
-library(shiny)
-library(shinythemes)
-
 ui = navbarPage("AC 3.0: Distributions of Data",
                 theme = shinytheme("journal"),
                 header = tags$head(
@@ -11,7 +8,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                             href = "style.css")
                 ),
                 
-                # open first tab
+                # open introduction tab
                 tabPanel("Introduction",
                  fluidRow(
                   withMathJax(),
@@ -25,9 +22,9 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                     plotOutput("introplot", height = "700px")
                 )
                 )
-                ), # close first tab
+                ), # close introduction tab
                 
-                # open second tab
+                # open first activity tab
                 tabPanel("Normal Distribution",
                   column(width = 6,
                     wellPanel(
@@ -51,9 +48,9 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                 ),
                       plotOutput("activity1plot", height = "600px")
                 )
-                ), # close second tab
+                ), # close first activity tab
                 
-                # open third tab
+                # open second activity tab
                 tabPanel("Poisson Distribution",
                   column(width = 6,
                     wellPanel(
@@ -71,11 +68,12 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                   downloadButton("betadata","download data")
                                 ),
                   
-                                plotOutput("activity2plot", height = "600px")
+                                plotOutput("activity2plot", 
+                                           height = "600px")
                 )
-                ), # close third tab
+                ), # close second activity tab
                 
-                # open fourth tab
+                # open third activity tab
                 tabPanel("Uniform Distribution",
                   column(width = 6,
                     wellPanel(
@@ -89,15 +87,16 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                        sliderInput("bins",
                                    label = "number of bins",
                                    min = 1, max = 20, 
-                                   value = 10, step= 1, width = "400px"),
+                                   value = 10, step= 1, 
+                                   width = "400px"),
                        downloadButton("pipetdata","download data")
                               ),
                                 plotOutput("activity3plot", 
                                            height = "600px")
                          )
-                ), # close fourth tab
+                ), # close third activity tab
                 
-                # open fifth tab
+                # open fourth activity tab
                 tabPanel("Binomial Distribution",
                   column(width = 6,
                     wellPanel(
@@ -121,13 +120,13 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                                 plotOutput("activity4plot", 
                                            height = "600px")
                          )
-                ), # close fifth tab
+                ), # close fourth activity tab
                 
-                # open sixth tab
+                # open wrap-up tab
                 tabPanel("Wrapping Up",
                          column(width = 6,
-                                wellPanel(id = "wrapupPanel",
-                                          style = "overflow-y:scroll; max-height: 750px",
+                          wellPanel(id = "wrapupPanel",
+                            style = "overflow-y:scroll; max-height: 700px",
                                   includeHTML("text/wrapup.html")
                                 )     
                          ),
@@ -140,7 +139,7 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                                 plotOutput("wrapupplot1", 
                                            height = "600px")
                          )
-                ) # close sixth tab
+                ) # close wrap-up tab
               
   ) # close navbarPage
 

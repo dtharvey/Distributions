@@ -2,31 +2,13 @@
 output: html_fragment
 ---
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-
 <!-- text for summary -->
 
-#### Source of Data
+#### Sources of Data Used in This Module
 
 Of the four data sets in this module, only the Cu~*x*~S data is from an actual experiment (completed by students at DePauw University in the 1990s). See [Blanchnik, R.; Müller, A. "The Formation of Cu~*x*~S From the Elements I. Copper Used in Form of Powders," Thermochim. Acta, 2000, 361, 31-52](https://doi.org/10.1016/S0040-6031(00)00545-1) for a discussion of some of the factors that affect the formation of non-stoichiometric copper sulfide.
 
-The other three data sets were created using `R` to simulate samples drawn at random from (a) a poisson distribution using a $\lambda$ of 5 particles per 7 seconds ($n = 365$ samples) and the `rpois()` function, (b) a uniform distribution using a minimum value of 9.98 and a maximum value of 10.02 ($n = 1000$ samples) and the `runif()` function, and (c) a binomial distribution using a size of 27, a probability of 0.0111 ($n = 100$ samples), and the `rbinom()` function. All three of these data sets, however, are representative of the expected results for these systems.
+The other three data sets were created using `R` to simulate samples drawn at random from (a) a Poisson distribution for 365 samples using a $\lambda$ of 5 particles per 7 seconds and the `rpois()` function, (b) a uniform distribution for 1000 samples using a minimum value of 9.98 and a maximum value of 10.02 and the `runif()` function, and (c) a binomial distribution of 100 samples using a size of 27 and a probability of 0.0111, and the `rbinom()` function. All three of these data sets, however, are representative of the expected results for these systems.
 
 #### Other Types of Distributions
 
@@ -36,4 +18,4 @@ where $\lambda$ is the average rate at which the event occurs. The simulated emi
 
 #### Additional Resources
 
-For a more in depth discussion of the distributions considered in this module, including examples of R code for simulating and plotting distributions, see Chapter 5 in [Chemometrics Using R](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/05%3A_The_Distribution_of_Data), which is available through the [LibreText Project](https://libretexts.org/). 
+For a more in depth discussion of the distributions considered in this module, including examples of R code for simulating and plotting distributions, see Chapter 5 in [Chemometrics Using R](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/05%3A_The_Distribution_of_Data), which is available through the [LibreText Project](https://libretexts.org/). A useful resource for using `R` to create visualizations of distributions is [W. Chang *R Graphics Cookbook*, O'Reilly, 2013](https://r-graphics.org/).
