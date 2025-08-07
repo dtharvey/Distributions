@@ -6,16 +6,12 @@ output: html_fragment
 
 #### The Poisson Distribution: Emission of Beta Particles from ^40^K
 
-The figure on the right is a barplot that shows the number of beta particles emitted by a sample of ^40^K during 365 consecutive 7-s intervals. In some intervals, no beta particles were emitted; in other intervals, as many as 13 beta particles were emitted.
+**Exercise 1**. The figure on the right is a barplot of the number of beta particles emitted by a sample of ^40^K during 365 consecutive 7-s intervals. Although a barplot and a histogram look similar, they are not interchangeable. A histogram is used for continuous data and a barplot is used for discrete data. Why are the results of beta emission discrete instead of continuous?
 
-**Exercise 1**. Although a barplot and a histogram look similar, they are not interchangeable. A histogram is useful for continuous data and a barplot is useful for discrete data. Why are the results of beta emission considered discrete instead of continuous?
-
-**Exercise 2**. The data in this experiment follows a Poisson distribution in which the probability that a particular number of beta particles are emitted in a fixed period of time, $p(x)$, is given by the equation
+**Exercise 2**. This experiment follows a Poisson distribution in which the probability that a particular number of beta particles is emitted in a fixed period of time, $p(x)$, is
 $$p(x) = \frac{\lambda^x e^{-\lambda}}{x!}$$
-where $\lambda$ is the average rate of beta emission and where the exclamation point indicates the factorial (e.g. $3! = 3 \times 2 \times 1 = 6$). For the Cu~*x*~S data we drew the theoretical distribution as a smooth line, but here we show only a set of points connected by line segments. Explain why we can display the normal distribution as a smooth line, but cannot do so with a Poisson distribution.
+where $\lambda$ is the average rate of beta emission and where the exclamation point is a factorial (e.g. $3! = 3 \times 2 \times 1 = 6$). For the Cu~*x*~S data we drew the theoretical distribution as a smooth line, but here we show a set of points connected by line segments. Explain why we can display the normal distribution as a smooth line but cannot do so with a Poisson distribution.
 
-**Exercise 3**. How does the shape of the Poisson distribution change as you adjust the value of $\lambda$ from 0 to 13? Why does this change in shape make sense given the equation for the Poisson distribution?
+**Exercise 3**. How does the shape of the Poisson distribution change as you adjust $\lambda$ from 0 to 13? Why does this change in shape make sense given the equation for the Poisson distribution? Adjust the slider to determine the value of $\lambda$ for this data. Use your value of $\lambda$ to calculate the probability that a single beta particle is emitted. Explain how to convert this probability into a number of events and compare this result to the data in the figure.
 
-**Exercise 4**. Adjust the slider to determine the value of $\lambda$ for this data. Use your value of $\lambda$ to calculate the probability that a single beta particle is emitted, *p*(1). Explain how to convert this probability into a number of events and compare this result to the data in the figure.
-
-**Exercise 5**. The mean for a Poisson distribution is equal to $\lambda$ and its standard deviation is equal to $\sqrt{\lambda}$. Report the mean and standard deviation for this data using your value for $\lambda$ and then download the data as a spreadsheet and check your result by calculating the actual mean and standard deviation.
+**Exercise 4**. The mean for a Poisson distribution is $\lambda$ and its standard deviation is $\sqrt{\lambda}$. Report the mean and standard deviation for this data using your value for $\lambda$ and then download the data as a spreadsheet and check your result by calculating the actual mean and standard deviation.
