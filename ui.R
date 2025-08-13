@@ -14,7 +14,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                            withMathJax(),
                            column(width = 6,
                                   wellPanel(
-                                    div(class = "scrollable-well",
+                                    class = "scrollable-well",
+                                    div(
                                         class = "html-fragment",
                                         includeHTML("text/introduction.html")
                                     ))),
@@ -28,7 +29,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          fluidRow(
                          column(width = 6,
                                 wellPanel(
-                                  div(class = "scrollable-well",
+                                  class = "scrollable-well",
+                                  div(
                                       class = "html-fragment",
                                       includeHTML("text/activity1.html")
                                   ))),
@@ -56,7 +58,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          fluidRow(
                          column(width = 6,
                                 wellPanel(
-                                  div(class = "scrollable-well",
+                                  class = "scrollable-well",
+                                  div(
                                       class = "html-fragment",
                                       includeHTML("text/activity2.html")
                                   ))),
@@ -80,7 +83,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          fluidRow(
                          column(width = 6,
                                 wellPanel(
-                                  div(class = "scrollable-well",
+                                  class = "scrollable-well",
+                                  div(
                                       class = "html-fragment",
                                       includeHTML("text/activity3.html")
                                   ))),
@@ -104,7 +108,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          fluidRow(
                          column(width = 6,
                                 wellPanel(
-                                  div(class = "scrollable-well",
+                                  class = "scrollable-well",
+                                  div(
                                       class = "html-fragment",
                                       includeHTML("text/activity4.html")
                                   ))),
@@ -132,7 +137,8 @@ ui = navbarPage("AC 3.0: Distributions of Data",
                          fluidRow(
                          column(width = 6,
                                 wellPanel(
-                                  div(class = "scrollable-well",
+                                  class = "scrollable-well",
+                                  div(
                                       class = "html-fragment",
                                       includeHTML("text/wrapup.html")
                                   ))),

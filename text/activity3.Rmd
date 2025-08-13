@@ -6,9 +6,9 @@ output: html_fragment
 
 #### The Uniform Distribution: Certification of 10-mL Class A Pipettes
 
-**Exercise 1**. The figure on the right is a histogram that shows the distribution of certified volumes for 1000 10-mL Class A volumetric pipettes. The number of pipets in each of the histogram's bins is displayed at the top of the bin. A pipet's certified tolerance is the range of volumes around the pipet's expected volume, which for a Class A 10-mL pipet is $10.00 \pm 0.02$ mL. A pipette with a volume outside this range is discarded. Is this data continuous or discrete? How do you know?
+**Exercise 1**. The figure on the right is a histogram that shows the distribution of certified volumes for $1000$ $10$-mL Class A volumetric pipettes. The number of pipets in each of the histogram's bins is displayed at the top of the bin. A pipet's certified tolerance is the range of volumes around the pipet's expected volume, which for a Class A 10-mL pipet is $10.00 \pm 0.02$ mL. A pipette with a volume outside this range is discarded. Is this data continuous or discrete? How do you know?
 
 **Exercise 2**. The data in this experiment follows a uniform distribution. What does it mean for a distribution to be uniform? What happens to the shape of this distribution and the counts in each bin if you increase or decrease the number of bins? Use the slider to check your prediction?
 
-**Exercise 3**. For a uniform distribution, the mean, $\mu$, is $\frac{a+b}{2}$ and the standard deviation, $\sigma$ is $\sqrt{\frac{1}{12}(b - a)^2}$, where $a$ and $b$ are, respectively, the distribution's smallest and largest values. Calculate the expected mean and standard deviation for Class A 10-mL pipets and then download the data as a spreadsheet and check your result by calculating the actual mean and standard deviation.
+**Exercise 3**. For a uniform distribution, the mean, $\mu$, is $\frac{a+b}{2}$ and the standard deviation, $\sigma$ is $\sqrt{\frac{1}{12}(b - a)^2}$, where $a$ and $b$ are, respectively, the distribution's smallest and largest values. Calculate the expected mean and standard deviation for Class A $10$-mL pipets and then download the data as a spreadsheet and check your result by calculating the actual mean and standard deviation.
 
