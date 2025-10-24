@@ -4,7 +4,7 @@ Students are introduced to four common distributions of experimental data: the n
 
 required packages: `shiny`, `shinythemes`
 
-to run locally in a browser window enter `shiny::runGitHub("Distributions","dtharvey", launch.browser = TRUE)` in console
+to run locally in a browser window enter `shiny::runGitHub("Distributions","dtharvey", launch.browser = TRUE)` in the console
 
 
 
